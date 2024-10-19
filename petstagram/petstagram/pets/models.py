@@ -18,9 +18,10 @@ class Pet(models.Model):
     )
 
     slug = models.SlugField(
-        null=False,
+        null=True,
         blank=True,
         unique=True,
+        editable=False
     )
 
     def save(self, *args, **kwargs):
